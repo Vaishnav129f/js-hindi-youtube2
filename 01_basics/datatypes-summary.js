@@ -1,7 +1,11 @@
 // Primitive 
 
-//7 types : String , Number, Boolean, null, undefined,Symbol(unique banane ke liye use krte component), BigINT
+//7 types : String(Call ByValue) , Number, Boolean, null, undefined,Symbol(unique banane ke liye use krte component), BigINT
 
+
+//Refrenced (non Primitives)
+//array , objects, function
+//Browser ke web events kya hote hain
 const score = 100;
 const scoreValue = 100.3;
 

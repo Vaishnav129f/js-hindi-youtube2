@@ -5,45 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chai aur Code | DOM</title>
 </head>
-<body style="background-color:#212121; color: #fff;">
+<body style="background-color: #212121; color:#fff">
     <ul class="language">
-        <li>JavaScript</li>
+        <li>Javascript</li>
+
     </ul>
     
 </body>
-
 <script>
-    function addLanguage(langName){
-        const li = documnet.createElement('li');
-        li.innerHTML = `$(langName)`
-        document.querySelector('.language')
-        .appendChild(li)
+    function addLang(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector(`.language`).appendChild(li)
     }
-    addLanguage("Python")
-    addLanguage("typescript")
+    addLang("python");
+    addLang("typescript");
+
 
     function addOptiLang(langName){
-       const li  = document.createElement('li') ;
-       li.appendChild(document.createTextNode(langName))
-        document.querySelector('language').appendChild(li)
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
     }
     addOptiLang('golang')
 
     //Edit
     const secondLang = document.querySelector("li:nth-child(2)")
-    // secondLang.innerHTML = "Mojo";
+    //  secondLang.innerHTML = "Mojo"
     const newli = document.createElement('li')
     newli.textContent = "Mojo"
     secondLang.replaceWith(newli)
+    
+    //edit
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = '<li>TypeScript</li>';
+    
 
-    //Edit
-    const firstLang = docuent.querySelector("li:first-child")
-    firstLang.outerHTML = '<li>TypeScript</li>'
-
-    //remove 
+    //remove
     const lastLang = document.querySelector('li:last-child')
     lastLang.remove()
-    
 
 
 </script>
